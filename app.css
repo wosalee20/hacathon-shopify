@@ -6,16 +6,24 @@ body {
 .top-bar {
 	display: flex;
 	justify-content: space-between;
-
+	width: 1440px;
+	height: 56px;
 	align-items: center;
 	background-color: #1a1a1a;
 	color: white;
-	position: fixed;
-	top: 0;
+	margin-top: -8px;
 	right: 0;
-	left: 0;
+	margin-left: -10px;
 	z-index: 2;
 	margin-bottom: -130px;
+}
+
+.icon-bell-container:focus {
+	outline: 1px solid #005bd3; /* Blue outline color */
+}
+
+.user-info:focus {
+	outline: 1px solid #005bd3; /* Blue outline color */
 }
 
 .search-box {
@@ -32,7 +40,7 @@ body {
 	color: #fff;
 	transition: background-color 0.3s ease;
 	z-index: 1;
-	margin-right: 145px;
+
 	margin-top: 15px;
 }
 
@@ -57,10 +65,13 @@ body {
 	align-items: center;
 }
 
+.right-section {
+}
+
 .shopify-icon {
 	margin-top: 12px;
 	margin-bottom: 12px;
-	width: 464px;
+	width: 104.87px;
 	height: 30px;
 }
 
@@ -295,6 +306,7 @@ hr {
 	padding: 12px 8px;
 	border-radius: 8px;
 	color: #e3e3e3;
+	margin-top: 50px;
 }
 
 .trial-container span {
@@ -540,13 +552,14 @@ hr {
 }
 /* for iPhones */
 
-@media only screen and (min-device-width: 200px) and (max-device-width: 950px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 999px) {
 	body {
 		margin-left: -19px;
 
 		overflow-x: hidden;
-		max-width: 1601px;
-		height: auto;
+		overflow-y: hidden;
+		max-width: 1000px;
+		height: 567px;
 	}
 	.top-bar {
 		flex-direction: row;
@@ -555,7 +568,7 @@ hr {
 		width: 100%;
 		position: fixed;
 		top: 0;
-		right: 0;
+		margin-right: -10px;
 		left: 0;
 		z-index: 2;
 		margin-bottom: 0;
@@ -565,21 +578,22 @@ hr {
 		margin-top: 33px;
 		width: 447px;
 		height: 32px;
-		margin-left: -40;
+		margin-left: 100px;
 	}
 	.left-section,
 	.right-section {
 		flex-direction: row;
 		align-items: flex-start;
-		margin-top: 10px;
+		margin-top: -5px;
 	}
 	.middle-section {
 		margin-right: 0px;
 		margin-left: -130px;
+		margin-top: -7px;
 	}
 	.right-section {
-		margin-right: 60px;
-		margin-left: -60px;
+		margin-right: 0px;
+		margin-left: 0px;
 	}
 	.shopify-icon {
 		display: none;
@@ -593,7 +607,8 @@ hr {
 	.user-dropdown {
 		width: 100%;
 		max-width: none;
-		left: 0;
+		margin-left: 100px;
+		margin-top: -40px;
 	}
 	.user-dropdown a {
 		width: 100%;
@@ -601,11 +616,15 @@ hr {
 	.mobile-shopify-icon {
 		display: block;
 		margin-left: 10px;
+		margin-top: 8px;
 	}
 	.store-container {
 		min-width: 720px;
 		max-width: 1601px;
-		margin-top: 0;
+		margin-top: -10px;
+	}
+	.store-container a {
+		margin-left: 30px;
 	}
 	.startup-guide-container {
 		display: none;
@@ -628,7 +647,7 @@ hr {
 		max-width: 1200px;
 		height: 104px;
 		padding: 12px 8px 12px 16px;
-		gap: 16px;
+		margin-top: -46px;
 	}
 	.trial-container p {
 		width: 100%;
@@ -699,7 +718,85 @@ hr {
 	}
 	.notification-dropdown {
 		width: 358px;
-		margin-left: 390px;
+		margin-left: 410px;
+		height: 136px;
+		margin-top: 11px;
+		left: 16px;
+		border-radius: 14px;
+		border: 1px solid;
+		padding: 16px;
+		gap: 16px;
+	}
+	.user-info:hover {
+		background-color: transparent;
+	}
+}
+@media only screen and (min-device-width: 1000px) and (max-device-width: 1600px) {
+	body {
+		margin-left: -19px;
+
+		overflow-x: hidden;
+		max-width: 1601px;
+		height: auto;
+	}
+
+	.top-bar {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		margin-bottom: 0;
+	}
+	.search-box {
+		margin-right: 0;
+		margin-top: 33px;
+		width: 447px;
+		height: 32px;
+		margin-left: 120px;
+	}
+	.left-section,
+	.right-section {
+		flex-direction: row;
+		align-items: flex-start;
+		margin-top: 10px;
+	}
+	.middle-section {
+		margin-right: 0px;
+		margin-left: -130px;
+	}
+	.right-section {
+		margin-right: 60px;
+		margin-left: -60px;
+	}
+	.left-section {
+		margin-left: 20px;
+	}
+	.user-dropdown {
+		width: 320px;
+		margin-left: 725px;
+		height: 384px;
+		top: 116px;
+		left: 54px;
+		border-radius: 14px;
+		border: 1px solid;
+		padding: 6px 0px 6px 0px;
+		margin-top: -20px;
+	}
+	.dropdown-user-info {
+		width: 300px;
+		height: 36px;
+		border-radius: 8px;
+		justify-content: space-between;
+		padding: 4px 12px 4px 8px;
+	}
+	.notification-dropdown {
+		width: 358px;
+		margin-left: 700px;
 		height: 136px;
 		top: 116px;
 		left: 16px;
@@ -707,5 +804,8 @@ hr {
 		border: 1px solid;
 		padding: 16px;
 		gap: 16px;
+	}
+	.trial-container {
+		margin-top: -46px;
 	}
 }
