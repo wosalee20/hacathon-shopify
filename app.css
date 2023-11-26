@@ -677,3 +677,144 @@ hr {
 		margin-left: 390px;
 	}
 }
+@media only screen and (min-device-width: 720px) and (max-device-width: 1600px) {
+	body {
+		margin-left: -15px;
+		margin-right: 0;
+		overflow-x: hidden;
+		max-width: 1601px;
+	}
+	.top-bar {
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
+		min-width: 390px;
+		max-width: 781px;
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+		z-index: 2;
+		margin-bottom: 0;
+	}
+	.search-box {
+		margin-right: 0;
+		margin-top: 33px;
+		width: 447px;
+		height: 32px;
+		margin-left: -40;
+	}
+	.left-section,
+	.right-section {
+		flex-direction: row;
+		align-items: flex-start;
+		margin-top: 10px;
+	}
+	.middle-section {
+		margin-right: 0px;
+		margin-left: -130px;
+	}
+	.right-section {
+		margin-right: 40px;
+		margin-left: -60px;
+	}
+	.shopify-icon {
+		display: none;
+	}
+	.user-info,
+	.dropdown-user-info {
+		width: 100%;
+		max-width: none;
+		margin-bottom: 10px;
+	}
+	.user-dropdown {
+		width: 100%;
+		max-width: none;
+		left: 0;
+	}
+	.user-dropdown a {
+		width: 100%;
+	}
+	.mobile-shopify-icon {
+		display: block;
+		margin-left: 10px;
+	}
+	.store-container {
+		min-width: 720px;
+		max-width: 1601px;
+		margin-top: 0;
+	}
+	.startup-guide-container {
+		display: none;
+		margin-bottom: 5px;
+		margin-top: 15px;
+		height: auto;
+		min-width: 347px;
+		max-width: 420px;
+	}
+
+	.startup-guide-img {
+		display: none;
+	}
+	.main-title {
+		margin-top: -8px;
+		/* margin-bottom: 25px; */
+	}
+	.trial-container {
+		flex-direction: column;
+		width: 100%;
+		height: 104px;
+		padding: 12px 8px 12px 16px;
+		gap: 16px;
+	}
+	.trial-container p {
+		width: 100%;
+
+		margin-left: 20px;
+		margin-top: -50px;
+	}
+	.trial-container span {
+		margin-right: 680px;
+		margin-top: -5px;
+	}
+	.icon-bell-container {
+		padding: 7px;
+		margin-right: 8px;
+		background-color: #303030;
+		border-radius: 5px;
+		cursor: pointer;
+		margin-left: -100px;
+		margin-top: 11px;
+	}
+	.user-name {
+		display: none;
+	}
+	.profile-image {
+		width: 32px;
+		height: 32px;
+		margin-left: -40px;
+		margin-top: 19px;
+	}
+	.user-info {
+		background-color: transparent;
+	}
+	#close-button {
+		order: -1;
+		margin-top: 10px;
+		margin-left: ;
+	}
+	.startup-content-container {
+		min-width: 390px;
+		max-width: 460px;
+		height: 124px;
+		margin-bottom: 10px;
+		border-radius: 18px;
+		border: 1px solid #dbdbdb;
+		padding: 8px;
+		margin-top: 16px;
+		background-color: white;
+	}
+	.drop-down-button {
+		margin-left: 390px;
+	}
+}
