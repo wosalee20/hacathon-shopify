@@ -221,8 +221,6 @@ function toggleAccordion(index) {
 
 let progressValue = 0;
 
-// Your existing JavaScript code...
-
 const startupIcons = document.querySelectorAll(".svg-container");
 const defaultIcons = document.querySelectorAll(".svg1");
 const hoverIcons = document.querySelectorAll(".svg2");
@@ -297,4 +295,79 @@ function updateProgressText(value) {
 function updateProgressBar(value) {
 	const progressBar = document.getElementById("progress");
 	progressBar.style.width = value + "%";
+}
+
+document.addEventListener("keydown", function (event) {
+	if (event.key === "ArrowUp" || event.key === "ArrowDown") {
+		// Handle arrow up and down keys
+		navigateUpDown(event.key === "ArrowUp" ? -1 : 1);
+	} else if (event.key === "ArrowRight" || event.key === "ArrowLeft") {
+		// Handle arrow right and left keys
+		navigateRightLeft(event.key === "ArrowRight" ? 1 : -1);
+	} else if (event.key === "Enter") {
+		// Handle Enter key
+		activateSelectedItem();
+	}
+});
+
+function navigateUpDown(direction) {
+	const containers = document.querySelectorAll(".startup-guide-container");
+	const currentIndex = Array.from(containers).findIndex((container) =>
+		container.classList.contains("open")
+	);
+
+	let newIndex = currentIndex + direction;
+	if (newIndex < 0) {
+		newIndex = containers.length - 1;
+	} else if (newIndex >= containers.length) {
+		newIndex = 0;
+	}
+
+	toggleAccordion(newIndex);
+}
+
+function isSearchBarFocused() {
+	const searchInput = document.querySelector(".search-box");
+	return document.activeElement === searchInput;
+}
+function moveFocusToNotificationBar(moveRight) {
+	const bellContainer = document.getElementById("notification-bell-container");
+	const userDropMenu = document.querySelector(".user-info");
+
+	if (moveRight) {
+		if (bellContainer) {
+			bellContainer.focus();
+		}
+	} else {
+		if (userDropMenu) {
+			userDropMenu.focus();
+		}
+	}
+}
+
+function navigateRightLeft(direction) {
+	const containers = document.querySelectorAll(".startup-guide-container");
+	const currentIndex = Array.from(containers).findIndex((container) =>
+		container.classList.contains("open")
+	);
+
+	let newIndex = currentIndex + direction;
+	if (newIndex < 0) {
+		newIndex = containers.length - 1;
+	} else if (newIndex >= containers.length) {
+		newIndex = 0;
+	}
+
+	toggleAccordion(newIndex);
+}
+
+function activateSelectedItem() {
+	// Handle activation of the selected item (e.g., simulate a click)
+	const containers = document.querySelectorAll(".startup-guide-container");
+	const currentIndex = Array.from(containers).findIndex((container) =>
+		container.classList.contains("open")
+	);
+
+	const startupIcons = document.querySelectorAll(".svg-container");
+	startupIcons[currentIndex].click();
 }
