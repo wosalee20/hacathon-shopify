@@ -540,10 +540,10 @@ hr {
 }
 /* for iPhones */
 
-@media only screen and (min-device-width: 200px) and (max-device-width: 720px) {
+@media only screen and (min-device-width: 200px) and (max-device-width: 950px) {
 	body {
-		margin-left: -15px;
-		margin-right: 0;
+		margin-left: -19px;
+
 		overflow-x: hidden;
 		max-width: 1601px;
 	}
@@ -551,8 +551,7 @@ hr {
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
-		min-width: 390px;
-		max-width: 781px;
+		width: 100%;
 		position: fixed;
 		top: 0;
 		right: 0;
@@ -578,7 +577,7 @@ hr {
 		margin-left: -130px;
 	}
 	.right-section {
-		margin-right: 40px;
+		margin-right: 60px;
 		margin-left: -60px;
 	}
 	.shopify-icon {
@@ -625,7 +624,7 @@ hr {
 	}
 	.trial-container {
 		flex-direction: column;
-		width: 100%;
+		max-width: 1200px;
 		height: 104px;
 		padding: 12px 8px 12px 16px;
 		gap: 16px;
@@ -664,11 +663,10 @@ hr {
 	#close-button {
 		order: -1;
 		margin-top: 10px;
-		margin-left: ;
+		margin-left: 730px;
 	}
 	.startup-content-container {
-		min-width: 390px;
-		max-width: 460px;
+		width: 100%;
 		height: 124px;
 		margin-bottom: 10px;
 		border-radius: 18px;
@@ -678,6 +676,6 @@ hr {
 		background-color: white;
 	}
 	.drop-down-button {
-		margin-left: 390px;
+		margin-left: 750px;
 	}
 }
