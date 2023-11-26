@@ -546,6 +546,7 @@ hr {
 
 		overflow-x: hidden;
 		max-width: 1601px;
+		height: auto;
 	}
 	.top-bar {
 		flex-direction: row;
@@ -612,7 +613,7 @@ hr {
 		margin-top: 15px;
 		height: auto;
 		min-width: 347px;
-		max-width: 420px;
+		max-width: 920px;
 	}
 
 	.startup-guide-img {
@@ -677,5 +678,34 @@ hr {
 	}
 	.drop-down-button {
 		margin-left: 750px;
+	}
+	.user-dropdown {
+		width: 320px;
+		margin-left: 425px;
+		height: 384px;
+		top: 116px;
+		left: 54px;
+		border-radius: 14px;
+		border: 1px solid;
+		padding: 6px 0px 6px 0px;
+		gap: 4px;
+	}
+	.dropdown-user-info {
+		width: 300px;
+		height: 36px;
+		border-radius: 8px;
+		justify-content: space-between;
+		padding: 4px 12px 4px 8px;
+	}
+	.notification-dropdown {
+		width: 358px;
+		margin-left: 390px;
+		height: 136px;
+		top: 116px;
+		left: 16px;
+		border-radius: 14px;
+		border: 1px solid;
+		padding: 16px;
+		gap: 16px;
 	}
 }
