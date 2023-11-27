@@ -581,6 +581,7 @@ hr {
 		left: 0;
 		z-index: 2;
 		margin-bottom: 0;
+		margin-left: 0px;
 	}
 	.search-box {
 		margin-right: 0;
